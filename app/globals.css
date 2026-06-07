@@ -49,38 +49,39 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Apex Kinetic — deep slate base with electric teal accent (CTA only) */
+  --background: oklch(0.21 0.03 256);
+  --foreground: oklch(0.98 0.005 247);
+  --card: oklch(0.27 0.03 256);
+  --card-foreground: oklch(0.98 0.005 247);
+  --popover: oklch(0.24 0.03 256);
+  --popover-foreground: oklch(0.98 0.005 247);
+  --primary: oklch(0.78 0.14 184);
+  --primary-foreground: oklch(0.18 0.03 256);
+  --secondary: oklch(0.31 0.03 256);
+  --secondary-foreground: oklch(0.98 0.005 247);
+  --muted: oklch(0.31 0.03 256);
+  --muted-foreground: oklch(0.72 0.02 256);
+  --accent: oklch(0.78 0.14 184);
+  --accent-foreground: oklch(0.18 0.03 256);
+  --destructive: oklch(0.62 0.21 25);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.78 0.14 184);
+  --chart-1: oklch(0.78 0.14 184);
+  --chart-2: oklch(0.7 0.12 200);
+  --chart-3: oklch(0.6 0.1 220);
+  --chart-4: oklch(0.5 0.08 240);
+  --chart-5: oklch(0.85 0.06 170);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.24 0.03 256);
+  --sidebar-foreground: oklch(0.98 0.005 247);
+  --sidebar-primary: oklch(0.78 0.14 184);
+  --sidebar-primary-foreground: oklch(0.18 0.03 256);
+  --sidebar-accent: oklch(0.31 0.03 256);
+  --sidebar-accent-foreground: oklch(0.98 0.005 247);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.78 0.14 184);
 }
 
 .dark {
@@ -126,5 +127,53 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Frosted glass surface for cards */
+  .glass {
+    background-color: oklch(1 0 0 / 5%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid oklch(1 0 0 / 10%);
+  }
+  .glass-strong {
+    background-color: oklch(0.27 0.03 256 / 65%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid oklch(1 0 0 / 12%);
+  }
+
+  /* Scroll-reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
