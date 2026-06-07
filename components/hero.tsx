@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { CtaButton } from '@/components/cta-button'
+import { KineticBackground } from '@/components/kinetic-background'
 import { SectionReveal } from '@/components/section-reveal'
 import { stats } from '@/lib/site-data'
 import { Activity, ShieldCheck } from 'lucide-react'
@@ -17,6 +18,7 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
+        <KineticBackground />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>
