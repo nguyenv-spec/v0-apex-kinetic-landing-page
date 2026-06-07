@@ -1,5 +1,7 @@
 import { BookingProvider } from '@/components/booking-context'
 import { BookingModal } from '@/components/booking-modal'
+import { JoinProgramModal } from '@/components/join-program-modal'
+import { LearnMoreModal } from '@/components/learn-more-modal'
 import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
 import { Providers } from '@/components/providers'
@@ -23,6 +25,8 @@ export default function Page() {
       </main>
       <Footer />
       <BookingModal />
+      <JoinProgramModal />
+      <LearnMoreModal />
     </BookingProvider>
   )
 }

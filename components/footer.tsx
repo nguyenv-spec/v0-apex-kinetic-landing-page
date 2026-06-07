@@ -3,12 +3,15 @@
 import Link from 'next/link'
 import { Logo } from '@/components/logo'
 import { CtaButton } from '@/components/cta-button'
+import { useBooking } from '@/components/booking-context'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { clinic } from '@/lib/site-data'
 import { ArrowUp, MapPin, Phone, Clock } from 'lucide-react'
 
 export function Footer() {
+  const { openLearnMore } = useBooking()
+
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -104,15 +107,20 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} {clinic.name}. All rights reserved.
           </p>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={scrollToTop}
-            aria-label="Back to top"
-          >
-            <ArrowUp data-icon="inline-start" />
-            Back to top
-          </Button>
+          <div className="flex flex-col items-center gap-3 sm:flex-row">
+            <Button variant="ghost" size="sm" onClick={openLearnMore}>
+              Learn More
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={scrollToTop}
+              aria-label="Back to top"
+            >
+              <ArrowUp data-icon="inline-start" />
+              Back to top
+            </Button>
+          </div>
         </div>
       </div>
     </footer>

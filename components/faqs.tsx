@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { CtaButton } from '@/components/cta-button'
 import { SectionReveal } from '@/components/section-reveal'
 import { faqs } from '@/lib/site-data'
 
@@ -34,13 +33,6 @@ export function Faqs() {
               </AccordionItem>
             ))}
           </Accordion>
-        </SectionReveal>
-
-        <SectionReveal className="mt-10 flex flex-col items-center gap-3 text-center">
-          <p className="text-pretty text-muted-foreground">
-            Still have questions? The fastest answer is a conversation.
-          </p>
-          <CtaButton size="lg" className="h-12 px-6 text-base" />
         </SectionReveal>
       </div>
     </section>

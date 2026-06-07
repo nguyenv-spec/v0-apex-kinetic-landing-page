@@ -157,3 +157,33 @@ export const faqs = [
       'You can modify or cancel your appointment up to 24 hours in advance with no penalty. We just ask for a heads-up so another athlete can take the slot.',
   },
 ] as const
+
+export const program = {
+  name: 'Apex Performance Program',
+  tagline: 'Year-round, membership-based care for serious athletes.',
+  description:
+    'A structured membership that pairs you with our medical and physical therapy team for ongoing assessments, recovery sessions, and direct provider access — built to keep you performing all season long.',
+} as const
+
+export const programReasons = [
+  {
+    title: 'Priority Access',
+    description:
+      'Skip the waitlist with same-week appointments and direct messaging access to your care team.',
+  },
+  {
+    title: 'Proactive Care',
+    description:
+      'Quarterly biomechanical screenings catch issues before they sideline you — not after.',
+  },
+  {
+    title: 'Personalized Programming',
+    description:
+      'Custom recovery and performance plans that adapt to your training cycle and competition calendar.',
+  },
+  {
+    title: 'Member Pricing',
+    description:
+      'Reduced flat rates on every session, analysis, and follow-up for the length of your membership.',
+  },
+] as const

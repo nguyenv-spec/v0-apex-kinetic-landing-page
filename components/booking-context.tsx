@@ -14,6 +14,12 @@ type BookingContextValue = {
   presetService?: string
   openBooking: (service?: string) => void
   setOpen: (open: boolean) => void
+  joinOpen: boolean
+  openJoin: () => void
+  setJoinOpen: (open: boolean) => void
+  learnMoreOpen: boolean
+  openLearnMore: () => void
+  setLearnMoreOpen: (open: boolean) => void
 }
 
 const BookingContext = createContext<BookingContextValue | null>(null)
@@ -23,15 +29,31 @@ export function BookingProvider({ children }: { children: ReactNode }) {
   const [presetService, setPresetService] = useState<string | undefined>(
     undefined,
   )
+  const [joinOpen, setJoinOpen] = useState(false)
+  const [learnMoreOpen, setLearnMoreOpen] = useState(false)
 
   const openBooking = useCallback((service?: string) => {
     setPresetService(service)
     setOpen(true)
   }, [])
 
+  const openJoin = useCallback(() => setJoinOpen(true), [])
+  const openLearnMore = useCallback(() => setLearnMoreOpen(true), [])
+
   const value = useMemo(
-    () => ({ open, presetService, openBooking, setOpen }),
-    [open, presetService, openBooking],
+    () => ({
+      open,
+      presetService,
+      openBooking,
+      setOpen,
+      joinOpen,
+      openJoin,
+      setJoinOpen,
+      learnMoreOpen,
+      openLearnMore,
+      setLearnMoreOpen,
+    }),
+    [open, presetService, openBooking, joinOpen, openJoin, learnMoreOpen, openLearnMore],
   )
 
   return (

@@ -3,9 +3,12 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { BookingProvider } from '@/components/booking-context'
 import { BookingModal } from '@/components/booking-modal'
+import { JoinProgramModal } from '@/components/join-program-modal'
+import { LearnMoreModal } from '@/components/learn-more-modal'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ContactForm } from '@/components/contact-form'
+import { ProgramCta } from '@/components/program-cta'
 import { SectionReveal } from '@/components/section-reveal'
 import { Button } from '@/components/ui/button'
 import { clinic, providers } from '@/lib/site-data'
@@ -105,9 +108,13 @@ export default function ContactPage() {
             <ContactForm />
           </SectionReveal>
         </div>
+
+        <ProgramCta />
       </main>
       <Footer />
       <BookingModal />
+      <JoinProgramModal />
+      <LearnMoreModal />
     </BookingProvider>
   )
 }
