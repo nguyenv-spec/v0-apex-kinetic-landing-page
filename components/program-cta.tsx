@@ -17,7 +17,7 @@ export function ProgramCta() {
         </h2>
         <p className="max-w-xl text-pretty text-muted-foreground">
           {program.tagline} Ongoing assessments, recovery sessions, and direct
-          provider access — built to keep you performing all season long.
+          provider access, built to keep you performing all season long.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button

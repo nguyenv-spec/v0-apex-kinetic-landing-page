@@ -15,7 +15,7 @@ export function Providers() {
             Meet Your Recovery Team
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
-            Specialists who treat the cause, not just the symptom — so you
+            Specialists who treat the cause, not just the symptom, so you
             return stronger than before.
           </p>
         </SectionReveal>

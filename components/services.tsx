@@ -21,7 +21,7 @@ export function Services() {
             Services & Transparent Pricing
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
-            Flat-rate, no-surprise pricing for every visit. Choose the care that
+            Flat rate, no surprise pricing for every visit. Choose the care that
             fits your goals and book in seconds.
           </p>
         </SectionReveal>
@@ -62,7 +62,7 @@ export function Services() {
             <CreditCard className="size-4 shrink-0 text-primary" />
             <p className="text-pretty">
               We accept HSA/FSA cards. Detailed superbills provided for
-              out-of-network insurance reimbursement.
+              out of network insurance reimbursement.
             </p>
           </div>
         </SectionReveal>

@@ -59,7 +59,7 @@ export function BookingModal() {
               </DialogTitle>
               <DialogDescription className="max-w-sm text-pretty">
                 Thanks for reaching out. This is a prototype, so no information
-                was saved — our front desk would normally confirm your visit
+                was saved, and our front desk would normally confirm your visit
                 within one business day.
               </DialogDescription>
             </DialogHeader>

@@ -25,13 +25,6 @@ export function Hero() {
 
       <div className="mx-auto w-full max-w-7xl px-4 pt-32 pb-20 sm:px-6 sm:pt-40 sm:pb-28 lg:px-10">
         <div className="max-w-2xl">
-          <SectionReveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-              <ShieldCheck className="size-3.5" />
-              Non-surgical orthopedic care, Boston
-            </span>
-          </SectionReveal>
-
           <SectionReveal delay={80}>
             <h1 className="mt-6 text-5xl font-semibold tracking-tight text-balance text-foreground sm:text-6xl lg:text-7xl">
               Get Back in the Game.{' '}
@@ -41,7 +34,7 @@ export function Hero() {
 
           <SectionReveal delay={160}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-pretty text-muted-foreground">
-              Advanced non-surgical orthopedic care and rapid performance
+              Advanced non surgical orthopedic care and rapid performance
               recovery for athletes and active adults. Personalized recovery
               plans built to return you to peak performance.
             </p>

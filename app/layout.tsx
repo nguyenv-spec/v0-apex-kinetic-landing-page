@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     template: '%s | Apex Kinetic',
   },
   description:
-    'Advanced non-surgical orthopedic care and rapid performance recovery for athletes and active adults. Get back in the game faster with Apex Kinetic in Boston, MA.',
+    'Advanced non surgical orthopedic care and rapid performance recovery for athletes and active adults. Get back in the game faster with Apex Kinetic in Boston, MA.',
   keywords: [
     'sports medicine',
     'Boston sports medicine',
-    'non-surgical orthopedics',
+    'non surgical orthopedics',
     'physical therapy',
     'concussion management',
     'running gait analysis',
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     siteName: 'Apex Kinetic',
     title: 'Apex Kinetic | Elite Sports Medicine & Recovery',
     description:
-      'Advanced non-surgical orthopedic care and rapid performance recovery. Get back in the game faster.',
+      'Advanced non surgical orthopedic care and rapid performance recovery. Get back in the game faster.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Apex Kinetic | Elite Sports Medicine & Recovery',
     description:
-      'Advanced non-surgical orthopedic care and rapid performance recovery. Get back in the game faster.',
+      'Advanced non surgical orthopedic care and rapid performance recovery. Get back in the game faster.',
   },
   icons: {
     icon: [

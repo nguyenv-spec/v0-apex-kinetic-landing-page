@@ -45,7 +45,7 @@ export const services: Service[] = [
     title: 'Initial Orthopedic Consultation',
     provider: 'Dr. Marcus Vance, MD',
     description:
-      'Comprehensive injury evaluation, diagnostic imaging review, and a custom non-surgical recovery plan built around your goals.',
+      'Comprehensive injury evaluation, diagnostic imaging review, and a custom non surgical recovery plan built around your goals.',
     price: '$250',
     duration: '60 min',
   },
@@ -54,7 +54,7 @@ export const services: Service[] = [
     title: 'Sports Physical Therapy Session',
     provider: 'Casey Thompson, PT, DPT',
     description:
-      '60-minute 1-on-1 hands-on therapy with corrective exercise programming and recovery modalities tailored to your sport.',
+      '60 minute 1 on 1 hands on therapy with corrective exercise programming and recovery modalities tailored to your sport.',
     price: '$150',
     duration: '60 min',
   },
@@ -63,16 +63,16 @@ export const services: Service[] = [
     title: 'Biomechanical Running Analysis',
     provider: 'Casey Thompson, PT, DPT',
     description:
-      'Full-body video gait analysis, pressure-mapping, and personalized footwear and technique recommendations to run efficiently.',
+      'Full body video gait analysis, pressure mapping, and personalized footwear and technique recommendations to run efficiently.',
     price: '$199',
     duration: '75 min',
   },
   {
     id: 'concussion',
-    title: 'Concussion Assessment & Return-to-Play',
+    title: 'Concussion Assessment & Return to Play',
     provider: 'Dr. Marcus Vance, MD',
     description:
-      'Neurological screening, baseline comparisons, and a structured, medically-supervised return-to-play progression.',
+      'Neurological screening, baseline comparisons, and a structured, medically supervised return to play progression.',
     price: '$175',
     duration: '45 min',
   },
@@ -93,8 +93,8 @@ export const providers: Provider[] = [
     id: 'marcus-vance',
     name: 'Dr. Marcus Vance',
     credentials: 'MD',
-    role: 'Non-surgical Orthopedic Care & Concussion Management',
-    bio: 'Board-certified in sports medicine with over 15 years guiding athletes back to peak performance without the operating room.',
+    role: 'Non surgical Orthopedic Care & Concussion Management',
+    bio: 'Board certified in sports medicine with over 15 years guiding athletes back to peak performance without the operating room.',
     image: '/images/dr-marcus-vance.png',
     contactHref: '/contact',
   },
@@ -103,21 +103,21 @@ export const providers: Provider[] = [
     name: 'Casey Thompson',
     credentials: 'PT, DPT',
     role: 'Sports Physical Therapy & Biomechanical Running Analysis',
-    bio: 'Doctor of Physical Therapy specializing in movement mechanics, helping runners and lifters move efficiently and pain-free.',
+    bio: 'Doctor of Physical Therapy specializing in movement mechanics, helping runners and lifters move efficiently and pain free.',
     image: '/images/casey-thompson.png',
   },
 ]
 
 export const stats = [
-  { value: '94%', label: 'Return-to-Sport Rate' },
-  { value: '14-Day', label: 'Avg. Recovery Acceleration' },
+  { value: '94%', label: 'Return to Sport Rate' },
+  { value: '14 Day', label: 'Avg. Recovery Acceleration' },
   { value: '1,200+', label: 'Athletes Treated' },
 ] as const
 
 export const testimonials = [
   {
     quote:
-      'They pinpointed a stride defect behind my Achilles flare and had me back to a new PR within four weeks. Genuinely game-changing.',
+      'They pinpointed a stride defect behind my Achilles flare and had me back to a new PR within four weeks. Genuinely game changing.',
     name: 'Sarah T.',
     detail: 'Boston Marathon Competitor',
   },
@@ -129,7 +129,7 @@ export const testimonials = [
   },
   {
     quote:
-      'I was told I needed meniscus surgery. Apex Kinetic got me back to heavy lifting pain-free — no operation required.',
+      'I was told I needed meniscus surgery. Apex Kinetic got me back to heavy lifting pain free, no operation required.',
     name: 'Marcus L.',
     detail: 'Competitive CrossFitter',
   },
@@ -144,10 +144,10 @@ export const faqs = [
   {
     question: 'How does Superbill reimbursement work?',
     answer:
-      'We operate on transparent flat-rate pricing and provide an itemized superbill after each visit, which you can submit to your insurer for out-of-network reimbursement.',
+      'We operate on transparent flat rate pricing and provide an itemized superbill after each visit, which you can submit to your insurer for out of network reimbursement.',
   },
   {
-    question: "I'm not a pro athlete — is this right for me?",
+    question: "I'm not a pro athlete, is this right for me?",
     answer:
       'Absolutely. We treat all activity levels, from weekend warriors and recreational runners to active adults recovering from everyday injuries.',
   },
@@ -162,7 +162,7 @@ export const program = {
   name: 'Apex Performance Program',
   tagline: 'Year-round, membership-based care for serious athletes.',
   description:
-    'A structured membership that pairs you with our medical and physical therapy team for ongoing assessments, recovery sessions, and direct provider access — built to keep you performing all season long.',
+    'A structured membership that pairs you with our medical and physical therapy team for ongoing assessments, recovery sessions, and direct provider access, built to keep you performing all season long.',
 } as const
 
 export const programReasons = [
@@ -174,7 +174,7 @@ export const programReasons = [
   {
     title: 'Proactive Care',
     description:
-      'Quarterly biomechanical screenings catch issues before they sideline you — not after.',
+      'Quarterly biomechanical screenings catch issues before they sideline you, not after.',
   },
   {
     title: 'Personalized Programming',

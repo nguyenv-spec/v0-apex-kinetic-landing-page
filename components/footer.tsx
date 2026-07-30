@@ -25,8 +25,8 @@ export function Footer() {
             Ready to recover? Book your visit now.
           </h2>
           <p className="max-w-md text-pretty text-muted-foreground">
-            Personalized, non-surgical care that gets you back to peak
-            performance — faster.
+            Personalized, non surgical care that gets you back to peak
+            performance faster.
           </p>
           <CtaButton size="lg" className="h-12 px-6 text-base" />
         </div>

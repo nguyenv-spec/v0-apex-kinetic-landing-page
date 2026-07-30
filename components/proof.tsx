@@ -12,7 +12,7 @@ export function Proof() {
             Proof of Performance
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
-            Outcomes that get athletes back to what they love — backed by a
+            Outcomes that get athletes back to what they love, backed by a
             track record.
           </p>
         </SectionReveal>

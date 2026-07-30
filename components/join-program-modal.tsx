@@ -38,7 +38,7 @@ export function JoinProgramModal() {
               <DialogTitle className="text-2xl">You&apos;re on the list</DialogTitle>
               <DialogDescription className="max-w-sm text-pretty">
                 Thanks for your interest in the {program.name}. This is a
-                prototype, so no information was saved — our team would normally
+                prototype, so no information was saved, and our team would normally
                 reach out within one business day to finalize your enrollment.
               </DialogDescription>
             </DialogHeader>

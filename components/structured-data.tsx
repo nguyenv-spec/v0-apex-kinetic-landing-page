@@ -10,7 +10,7 @@ export function StructuredData() {
     '@type': 'MedicalClinic',
     name: clinic.name,
     description:
-      'Advanced non-surgical orthopedic care and rapid performance recovery for athletes and active adults.',
+      'Advanced non surgical orthopedic care and rapid performance recovery for athletes and active adults.',
     telephone: clinic.phone,
     email: clinic.email,
     address: {

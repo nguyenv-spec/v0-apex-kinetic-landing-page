@@ -98,10 +98,10 @@ Energetic, premium athletic palette. (Contrast is intentionally untested for now
      - Sports Physical Therapy Session (Casey Thompson) — 60-min 1-on-1 hands-on therapy, corrective exercise, modalities — **$150**
      - Biomechanical Running Analysis — full-body video gait analysis, pressure-mapping, footwear/technique recs — **$199**
      - Concussion Assessment & Return-to-Play — neurological screening, baseline comparisons, structured progression — **$175**
-   - Trust caption: *"We accept HSA/FSA cards. Detailed superbills provided for out-of-network insurance reimbursement."*
+   - Trust caption: *"We accept HSA/FSA cards. Detailed superbills provided for out of network insurance reimbursement."*
 
 5. **Proof of Performance**
-   - **Metrics bar:** "94% Return-to-Sport Rate" · "14-Day Average Recovery Acceleration" · "1,200+ Athletes Treated"
+   - **Metrics bar:** "94% Return-to-Sport Rate" · "14 Day Average Recovery Acceleration" · "1,200+ Athletes Treated"
    - **3 testimonial glass cards:**
      - Sarah T., Boston Marathon Competitor — Achilles flare / stride defect / PR in 4 weeks
      - David K., Parent of Varsity Football Player — concussion protocol precision & peace of mind

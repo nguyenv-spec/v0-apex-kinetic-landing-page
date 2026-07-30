@@ -17,7 +17,7 @@ import { ArrowLeft, Mail, MapPin, Phone } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Contact Dr. Marcus Vance',
   description:
-    'Get in touch with Dr. Marcus Vance for non-surgical orthopedic care and concussion management at Apex Kinetic in Boston, MA.',
+    'Get in touch with Dr. Marcus Vance for non surgical orthopedic care and concussion management at Apex Kinetic in Boston, MA.',
 }
 
 const marcus = providers.find((p) => p.id === 'marcus-vance')!
@@ -68,7 +68,8 @@ export default function ContactPage() {
 
             <p className="text-lg leading-relaxed text-pretty text-muted-foreground">
               {marcus.bio} Reach out directly with questions about your injury,
-              recovery options, or to discuss whether non-surgical care is right
+              recovery options, or to discuss whether non surgical care is right
+              for you.
               for you.
             </p>
 
