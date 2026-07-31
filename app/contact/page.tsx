@@ -12,7 +12,7 @@ import { ProgramCta } from '@/components/program-cta'
 import { SectionReveal } from '@/components/section-reveal'
 import { Button } from '@/components/ui/button'
 import { clinic, providers } from '@/lib/site-data'
-import { ArrowLeft, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowLeft, Mail, MapPin, Phone, BadgeCheck, CalendarDays } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Marcus Vance',
@@ -41,10 +41,10 @@ export default function ContactPage() {
         </SectionReveal>
 
         <div className="grid gap-12 lg:grid-cols-2">
-          {/* Provider intro + details */}
           <SectionReveal className="flex flex-col gap-8">
-            <div className="flex items-center gap-5">
-              <div className="relative size-24 shrink-0 overflow-hidden rounded-xl border border-border/60">
+            <div className="rounded-3xl border border-border/60 bg-background/70 p-6 shadow-sm">
+              <div className="flex items-center gap-5">
+                <div className="relative size-24 shrink-0 overflow-hidden rounded-xl border border-border/60">
                 <Image
                   src={marcus.image}
                   alt={`Portrait of ${marcus.name}, ${marcus.credentials}`}
@@ -53,25 +53,37 @@ export default function ContactPage() {
                   className="object-cover"
                 />
               </div>
-              <div>
-                <h1 className="text-3xl font-semibold tracking-tight text-foreground">
-                  {marcus.name}
-                  <span className="ml-2 text-base font-normal text-primary">
-                    {marcus.credentials}
-                  </span>
-                </h1>
-                <p className="mt-1 text-pretty text-primary/80">
-                  {marcus.role}
-                </p>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h1 className="text-3xl font-semibold tracking-[-0.03em] text-foreground">
+                      {marcus.name}
+                    </h1>
+                    <span className="inline-flex items-center gap-1 rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-foreground">
+                      <BadgeCheck className="size-3.5 text-primary" />
+                      {marcus.credentials}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-pretty text-primary/80">{marcus.role}</p>
+                </div>
+              </div>
+
+              <p className="mt-6 text-lg leading-relaxed text-pretty text-muted-foreground">
+                {marcus.bio} Reach out directly with questions about your injury,
+                recovery options, or to discuss whether non surgical care is right
+                for you.
+              </p>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/80 px-3 py-2 text-sm text-muted-foreground">
+                  <CalendarDays className="size-4 text-primary" />
+                  Same week appointments available
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/80 px-3 py-2 text-sm text-muted-foreground">
+                  <BadgeCheck className="size-4 text-primary" />
+                  No referral required for PT visits
+                </div>
               </div>
             </div>
-
-            <p className="text-lg leading-relaxed text-pretty text-muted-foreground">
-              {marcus.bio} Reach out directly with questions about your injury,
-              recovery options, or to discuss whether non surgical care is right
-              for you.
-              for you.
-            </p>
 
             <ul className="flex flex-col gap-4 text-muted-foreground">
               <li className="flex items-start gap-3">

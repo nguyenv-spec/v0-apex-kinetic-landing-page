@@ -26,7 +26,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { useBooking } from '@/components/booking-context'
 import { services } from '@/lib/site-data'
-import { CheckCircle2 } from 'lucide-react'
+import { CheckCircle2, CalendarDays, Clock3, Sparkles } from 'lucide-react'
 
 export function BookingModal() {
   const { open, setOpen, presetService } = useBooking()
@@ -71,7 +71,7 @@ export function BookingModal() {
           <>
             <DialogHeader>
               <DialogTitle className="text-2xl">
-                Book your appointment
+                Schedule your injury evaluation
               </DialogTitle>
               <DialogDescription>
                 Choose a date and service. Our team will confirm the exact time
@@ -79,15 +79,26 @@ export function BookingModal() {
               </DialogDescription>
             </DialogHeader>
 
+            <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-border/60 bg-background/70 px-3 py-3 text-sm text-muted-foreground">
+              <Sparkles className="size-4 text-primary" />
+              Same week assessments available for urgent injuries
+            </div>
+
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="flex justify-center rounded-xl border border-border/60 bg-background/40 p-2">
-                <Calendar
-                  mode="single"
-                  selected={date}
-                  onSelect={setDate}
-                  disabled={{ before: new Date() }}
-                  className="bg-transparent"
-                />
+              <div className="flex flex-col gap-3 rounded-2xl border border-border/60 bg-background/40 p-3">
+                <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                  <CalendarDays className="size-4 text-primary" />
+                  Choose a date
+                </div>
+                <div className="flex justify-center rounded-xl bg-background/70 p-2">
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    disabled={{ before: new Date() }}
+                    className="bg-transparent"
+                  />
+                </div>
               </div>
 
               <FieldGroup>
@@ -128,6 +139,11 @@ export function BookingModal() {
                   <Input id="phone" type="tel" placeholder="(617) 555-0100" />
                 </Field>
               </FieldGroup>
+            </div>
+
+            <div className="flex items-center gap-2 rounded-2xl border border-border/60 bg-background/70 px-3 py-3 text-sm text-muted-foreground">
+              <Clock3 className="size-4 text-primary" />
+              Most requests are confirmed within one business day.
             </div>
 
             <Button size="lg" className="w-full" onClick={handleConfirm}>

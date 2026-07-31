@@ -1,23 +1,25 @@
-import { Card, CardContent } from '@/components/ui/card'
 import { SectionReveal } from '@/components/section-reveal'
 import { stats, testimonials } from '@/lib/site-data'
-import { Quote } from 'lucide-react'
+import { HeartPulse, Quote } from 'lucide-react'
 
 export function Proof() {
   return (
     <section id="results" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionReveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
-            Proof of Performance
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-secondary/60 px-3 py-1 text-sm font-medium text-primary">
+            <HeartPulse className="size-4" />
+            Trusted by active adults and athletes
+          </div>
+          <h2 className="text-3xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-4xl">
+            Measurable progress, not vague promises
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
-            Outcomes that get athletes back to what they love, backed by a
-            track record.
+            We focus on outcomes that matter: returning you to the movement,
+            strength, and confidence you rely on every day.
           </p>
         </SectionReveal>
 
-        {/* Metrics bar */}
         <SectionReveal className="mt-12">
           <div className="glass grid grid-cols-1 gap-6 rounded-2xl px-6 py-8 sm:grid-cols-3">
             {stats.map((stat) => (
@@ -37,18 +39,16 @@ export function Proof() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <SectionReveal as="article" key={t.name} delay={i * 100}>
-              <Card className="glass h-full">
-                <CardContent className="flex h-full flex-col gap-4 p-6">
-                  <Quote className="size-7 text-primary" />
-                  <p className="flex-1 leading-relaxed text-pretty text-foreground">
-                    {t.quote}
-                  </p>
-                  <div>
-                    <p className="font-semibold text-foreground">{t.name}</p>
-                    <p className="text-sm text-muted-foreground">{t.detail}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex h-full flex-col gap-4 rounded-2xl border border-border/60 bg-background/60 p-6">
+                <Quote className="size-7 text-primary" />
+                <p className="flex-1 leading-relaxed text-pretty text-foreground">
+                  {t.quote}
+                </p>
+                <div className="border-t border-border/50 pt-4">
+                  <p className="font-semibold text-foreground">{t.name}</p>
+                  <p className="text-sm text-muted-foreground">{t.detail}</p>
+                </div>
+              </div>
             </SectionReveal>
           ))}
         </div>

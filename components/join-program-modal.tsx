@@ -13,7 +13,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useBooking } from '@/components/booking-context'
 import { program } from '@/lib/site-data'
-import { CheckCircle2 } from 'lucide-react'
+import { CheckCircle2, Sparkles } from 'lucide-react'
 
 export function JoinProgramModal() {
   const { joinOpen, setJoinOpen } = useBooking()
@@ -54,6 +54,11 @@ export function JoinProgramModal() {
               </DialogTitle>
               <DialogDescription>{program.tagline}</DialogDescription>
             </DialogHeader>
+
+            <div className="flex items-center gap-2 rounded-2xl border border-border/60 bg-background/70 px-3 py-3 text-sm text-muted-foreground">
+              <Sparkles className="size-4 text-primary" />
+              Priority access, proactive care, and direct provider support.
+            </div>
 
             <FieldGroup>
               <Field>

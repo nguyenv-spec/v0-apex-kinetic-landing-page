@@ -21,12 +21,11 @@ export function Footer() {
       {/* Micro-CTA band */}
       <div className="glass-strong">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-4 py-12 text-center sm:px-6 lg:px-10">
-          <h2 className="text-2xl font-semibold tracking-tight text-balance text-foreground sm:text-3xl">
-            Ready to recover? Book your visit now.
+          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-3xl">
+            Ready to recover? Book your visit today.
           </h2>
           <p className="max-w-md text-pretty text-muted-foreground">
-            Personalized, non surgical care that gets you back to peak
-            performance faster.
+            Personalized, non surgical care that gets you back to peak performance faster.
           </p>
           <CtaButton size="lg" className="h-12 px-6 text-base" />
         </div>

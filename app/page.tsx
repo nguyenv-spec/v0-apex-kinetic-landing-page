@@ -10,6 +10,7 @@ import { Proof } from '@/components/proof'
 import { Faqs } from '@/components/faqs'
 import { Footer } from '@/components/footer'
 import { StructuredData } from '@/components/structured-data'
+import { WhatHappensNext } from '@/components/what-happens-next'
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
         <Hero />
         <Providers />
         <Services />
+        <WhatHappensNext />
         <Proof />
         <Faqs />
       </main>

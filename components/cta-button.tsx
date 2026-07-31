@@ -16,7 +16,7 @@ type CtaButtonProps = {
  * Opens the shared booking modal. Style/size variants via props.
  */
 export function CtaButton({
-  label = 'Book Appointment',
+  label = 'Schedule Your Injury Evaluation',
   service,
   withIcon = true,
   size = 'lg',

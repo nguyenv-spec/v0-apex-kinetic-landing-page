@@ -37,6 +37,7 @@ export type Service = {
   description: string
   price: string
   duration: string
+  bodyPart: string
 }
 
 export const services: Service[] = [
@@ -48,6 +49,7 @@ export const services: Service[] = [
       'Comprehensive injury evaluation, diagnostic imaging review, and a custom non surgical recovery plan built around your goals.',
     price: '$250',
     duration: '60 min',
+    bodyPart: 'Knee',
   },
   {
     id: 'sports-pt',
@@ -57,6 +59,7 @@ export const services: Service[] = [
       '60 minute 1 on 1 hands on therapy with corrective exercise programming and recovery modalities tailored to your sport.',
     price: '$150',
     duration: '60 min',
+    bodyPart: 'Shoulder',
   },
   {
     id: 'running-analysis',
@@ -66,6 +69,7 @@ export const services: Service[] = [
       'Full body video gait analysis, pressure mapping, and personalized footwear and technique recommendations to run efficiently.',
     price: '$199',
     duration: '75 min',
+    bodyPart: 'Ankle',
   },
   {
     id: 'concussion',
@@ -75,6 +79,7 @@ export const services: Service[] = [
       'Neurological screening, baseline comparisons, and a structured, medically supervised return to play progression.',
     price: '$175',
     duration: '45 min',
+    bodyPart: 'Spine',
   },
 ]
 
@@ -169,7 +174,7 @@ export const programReasons = [
   {
     title: 'Priority Access',
     description:
-      'Skip the waitlist with same-week appointments and direct messaging access to your care team.',
+      'Skip the waitlist with same week appointments and direct messaging access to your care team.',
   },
   {
     title: 'Proactive Care',
@@ -184,6 +189,6 @@ export const programReasons = [
   {
     title: 'Member Pricing',
     description:
-      'Reduced flat rates on every session, analysis, and follow-up for the length of your membership.',
+      'Reduced flat rates on every session, analysis, and follow up for the length of your membership.',
   },
 ] as const

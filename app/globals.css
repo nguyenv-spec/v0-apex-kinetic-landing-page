@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: var(--font-geist-sans), 'Geist Fallback';
-  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+  --font-heading: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-mono: 'SFMono-Regular', 'SF Mono', monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,39 +49,38 @@
 }
 
 :root {
-  /* Apex Kinetic — deep slate base with electric teal accent (CTA only) */
-  --background: oklch(0.21 0.03 256);
-  --foreground: oklch(0.98 0.005 247);
-  --card: oklch(0.27 0.03 256);
-  --card-foreground: oklch(0.98 0.005 247);
-  --popover: oklch(0.24 0.03 256);
-  --popover-foreground: oklch(0.98 0.005 247);
-  --primary: oklch(0.78 0.14 184);
-  --primary-foreground: oklch(0.18 0.03 256);
-  --secondary: oklch(0.31 0.03 256);
-  --secondary-foreground: oklch(0.98 0.005 247);
-  --muted: oklch(0.31 0.03 256);
-  --muted-foreground: oklch(0.72 0.02 256);
-  --accent: oklch(0.78 0.14 184);
-  --accent-foreground: oklch(0.18 0.03 256);
-  --destructive: oklch(0.62 0.21 25);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.78 0.14 184);
-  --chart-1: oklch(0.78 0.14 184);
-  --chart-2: oklch(0.7 0.12 200);
-  --chart-3: oklch(0.6 0.1 220);
-  --chart-4: oklch(0.5 0.08 240);
-  --chart-5: oklch(0.85 0.06 170);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.24 0.03 256);
-  --sidebar-foreground: oklch(0.98 0.005 247);
-  --sidebar-primary: oklch(0.78 0.14 184);
-  --sidebar-primary-foreground: oklch(0.18 0.03 256);
-  --sidebar-accent: oklch(0.31 0.03 256);
-  --sidebar-accent-foreground: oklch(0.98 0.005 247);
-  --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: oklch(0.78 0.14 184);
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #e63946;
+  --primary-foreground: #ffffff;
+  --secondary: #eef7ff;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+  --accent: #0ea5e9;
+  --accent-foreground: #0f172a;
+  --destructive: #dc2626;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0ea5e9;
+  --chart-1: #e63946;
+  --chart-2: #0ea5e9;
+  --chart-3: #10b981;
+  --chart-4: #0f172a;
+  --chart-5: #64748b;
+  --radius: 0.8rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #e63946;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eef7ff;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #0ea5e9;
 }
 
 .dark {
@@ -124,6 +123,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at top left, rgba(14, 165, 233, 0.08), transparent 24%), linear-gradient(180deg, #f8fafc 0%, #f8fafc 100%);
   }
   html {
     @apply font-sans;
@@ -134,16 +134,18 @@
 @layer utilities {
   /* Frosted glass surface for cards */
   .glass {
-    background-color: oklch(1 0 0 / 5%);
+    background-color: rgba(255, 255, 255, 0.78);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid oklch(1 0 0 / 10%);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
   }
   .glass-strong {
-    background-color: oklch(0.27 0.03 256 / 65%);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid oklch(1 0 0 / 12%);
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    box-shadow: 0 16px 40px -16px rgba(15, 23, 42, 0.14);
   }
 
   /* Scroll-reveal animation */

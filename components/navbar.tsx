@@ -12,9 +12,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { navLinks } from '@/lib/site-data'
+import { clinic, navLinks } from '@/lib/site-data'
 import { cn } from '@/lib/utils'
-import { Menu } from 'lucide-react'
+import { Menu, MapPin, Phone } from 'lucide-react'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -36,10 +36,27 @@ export function Navbar() {
           : 'border-b border-transparent bg-transparent',
       )}
     >
+      <div className="hidden border-b border-border/60 bg-background/95 px-4 py-2 text-sm text-muted-foreground backdrop-blur md:block">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <a
+              href={clinic.phoneHref}
+              className="inline-flex items-center gap-2 font-medium text-foreground hover:text-primary"
+            >
+              <Phone className="size-4" />
+              {clinic.phone}
+            </a>
+            <span className="inline-flex items-center gap-2">
+              <MapPin className="size-4" />
+              {clinic.address.line1}, {clinic.address.city}
+            </span>
+          </div>
+        </div>
+      </div>
+
       <nav className="mx-auto flex h-16 w-full items-center justify-between px-4 sm:px-6 lg:px-10">
         <Logo />
 
-        {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -56,7 +73,6 @@ export function Navbar() {
           <CtaButton size="default" />
         </div>
 
-        {/* Mobile hamburger */}
         <div className="md:hidden">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger

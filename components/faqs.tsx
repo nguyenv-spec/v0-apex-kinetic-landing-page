@@ -12,7 +12,7 @@ export function Faqs() {
     <section id="faq" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-10">
         <SectionReveal className="text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-4xl">
             Questions, Answered
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">

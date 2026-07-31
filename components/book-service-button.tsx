@@ -8,7 +8,7 @@ export function BookServiceButton({ serviceId }: { serviceId: string }) {
   return (
     <Button
       variant="outline"
-      className="w-full"
+      className="w-full sm:w-fit"
       onClick={() => openBooking(serviceId)}
     >
       Book This Session
