@@ -10,14 +10,21 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
 })
 
+const siteUrl = 'https://www.apexkinetic.com'
+const defaultTitle = 'Apex Kinetic | Elite Sports Medicine & Recovery in Boston'
+const defaultDescription =
+  'Advanced non-surgical orthopedic care and rapid recovery for athletes and active adults in Boston. Sports medicine, concussion care, and performance therapy with Apex Kinetic.'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://apexkinetic.example.com'),
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
   title: {
-    default: 'Apex Kinetic | Elite Sports Medicine & Recovery in Boston',
+    default: defaultTitle,
     template: '%s | Apex Kinetic',
   },
-  description:
-    'Advanced non surgical orthopedic care and rapid performance recovery for athletes and active adults. Get back in the game faster with Apex Kinetic in Boston, MA.',
+  description: defaultDescription,
   keywords: [
     'sports medicine',
     'Boston sports medicine',
@@ -26,26 +33,40 @@ export const metadata: Metadata = {
     'concussion management',
     'running gait analysis',
     'athletic recovery',
+    'Boston orthopedic care',
   ],
   authors: [{ name: 'Apex Kinetic' }],
+  applicationName: 'Apex Kinetic',
   generator: 'v0.app',
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://apexkinetic.example.com',
+    url: siteUrl,
     siteName: 'Apex Kinetic',
-    title: 'Apex Kinetic | Elite Sports Medicine & Recovery',
-    description:
-      'Advanced non surgical orthopedic care and rapid performance recovery. Get back in the game faster.',
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Apex Kinetic preview image for sports medicine and recovery care',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Apex Kinetic | Elite Sports Medicine & Recovery',
-    description:
-      'Advanced non surgical orthopedic care and rapid performance recovery. Get back in the game faster.',
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ['/og-image.png'],
   },
   icons: {
     icon: '/images/apex-kinetic-logo.png',
+    shortcut: '/images/apex-kinetic-logo.png',
     apple: '/images/apex-kinetic-logo.png',
   },
 }

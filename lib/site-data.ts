@@ -8,7 +8,7 @@ export const clinic = {
   tagline: 'Elite Sports Medicine & Recovery',
   phone: '(617) 555-0142',
   phoneHref: 'tel:+16175550142',
-  email: 'hello@apexkinetic.example.com',
+  email: 'hello@apexkinetic.com',
   address: {
     line1: '88 Seaport Boulevard, Suite 410',
     city: 'Boston',
