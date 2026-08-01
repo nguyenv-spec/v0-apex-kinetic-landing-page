@@ -62,6 +62,16 @@ export const services: Service[] = [
     bodyPart: 'Shoulder',
   },
   {
+    id: 'hip-performance',
+    title: 'Hip Performance & Mobility Session',
+    provider: 'Casey Thompson, PT, DPT',
+    description:
+      'Targeted hip assessment and movement retraining to restore strength, reduce pain, and keep you moving through rotational sports.',
+    price: '$155',
+    duration: '60 min',
+    bodyPart: 'Hip',
+  },
+  {
     id: 'running-analysis',
     title: 'Biomechanical Running Analysis',
     provider: 'Casey Thompson, PT, DPT',
