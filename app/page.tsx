@@ -18,20 +18,20 @@ export const metadata: Metadata = {
   description:
     'Apex Kinetic offers non-surgical orthopedic care, sports physical therapy, concussion support, and performance recovery in Boston.',
   alternates: {
-    canonical: 'https://www.apexkinetic.com/',
+    canonical: 'https://v0-apex-kinetic-landing-page.vercel.app/',
   },
   openGraph: {
     title: 'Apex Kinetic | Boston Sports Medicine & Recovery',
     description:
       'Apex Kinetic offers non-surgical orthopedic care, sports physical therapy, concussion support, and performance recovery in Boston.',
-    url: 'https://www.apexkinetic.com/',
-    images: ['/og-image.png'],
+    url: 'https://v0-apex-kinetic-landing-page.vercel.app/',
+    images: ['https://v0-apex-kinetic-landing-page.vercel.app/og-image.png'],
   },
   twitter: {
     title: 'Apex Kinetic | Boston Sports Medicine & Recovery',
     description:
       'Apex Kinetic offers non-surgical orthopedic care, sports physical therapy, concussion support, and performance recovery in Boston.',
-    images: ['/og-image.png'],
+    images: ['https://v0-apex-kinetic-landing-page.vercel.app/og-image.png'],
   },
 }
 

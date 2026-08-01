@@ -19,20 +19,20 @@ export const metadata: Metadata = {
   description:
     'Get in touch with Dr. Marcus Vance and the Apex Kinetic team for non-surgical orthopedic care, sports medicine, and recovery support in Boston.',
   alternates: {
-    canonical: 'https://www.apexkinetic.com/contact',
+    canonical: 'https://v0-apex-kinetic-landing-page.vercel.app/contact',
   },
   openGraph: {
     title: 'Contact Apex Kinetic | Boston Sports Medicine',
     description:
       'Get in touch with Dr. Marcus Vance and the Apex Kinetic team for non-surgical orthopedic care, sports medicine, and recovery support in Boston.',
-    url: 'https://www.apexkinetic.com/contact',
-    images: ['/og-image.png'],
+    url: 'https://v0-apex-kinetic-landing-page.vercel.app/contact',
+    images: ['https://v0-apex-kinetic-landing-page.vercel.app/og-image.png'],
   },
   twitter: {
     title: 'Contact Apex Kinetic | Boston Sports Medicine',
     description:
       'Get in touch with Dr. Marcus Vance and the Apex Kinetic team for non-surgical orthopedic care, sports medicine, and recovery support in Boston.',
-    images: ['/og-image.png'],
+    images: ['https://v0-apex-kinetic-landing-page.vercel.app/og-image.png'],
   },
 }
 

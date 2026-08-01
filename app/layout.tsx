@@ -10,7 +10,7 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
 })
 
-const siteUrl = 'https://www.apexkinetic.com'
+const siteUrl = 'https://v0-apex-kinetic-landing-page.vercel.app'
 const defaultTitle = 'Apex Kinetic | Elite Sports Medicine & Recovery in Boston'
 const defaultDescription =
   'Advanced non-surgical orthopedic care and rapid recovery for athletes and active adults in Boston. Sports medicine, concussion care, and performance therapy with Apex Kinetic.'
