@@ -45,21 +45,8 @@ export const metadata: Metadata = {
       'Advanced non surgical orthopedic care and rapid performance recovery. Get back in the game faster.',
   },
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/apex-kinetic-logo.png',
+    apple: '/images/apex-kinetic-logo.png',
   },
 }
 

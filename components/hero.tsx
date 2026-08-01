@@ -3,7 +3,7 @@ import { CtaButton } from '@/components/cta-button'
 import { KineticBackground } from '@/components/kinetic-background'
 import { SectionReveal } from '@/components/section-reveal'
 import { stats } from '@/lib/site-data'
-import { Activity, BadgeCheck, ShieldCheck, Sparkles, Star } from 'lucide-react'
+import { Activity, BadgeCheck, ShieldCheck, Sparkles, Star, Users } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -49,34 +49,28 @@ export function Hero() {
             </div>
           </SectionReveal>
 
-          <SectionReveal delay={320}>
-            <div className="mt-8 flex flex-wrap items-center gap-3 rounded-2xl border border-border/60 bg-background/80 px-4 py-4 shadow-sm">
-              <div className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-sm font-medium text-foreground">
-                <Star className="size-4 fill-primary text-primary" />
-                4.9 rating across 300+ reviews
-              </div>
-              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                <ShieldCheck className="size-4 text-accent" />
-                No referral needed for PT in Massachusetts
-              </div>
-              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                <BadgeCheck className="size-4 text-accent" />
-                Flexible insurance support
-              </div>
-            </div>
-          </SectionReveal>
         </div>
 
         <SectionReveal delay={360}>
-          <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
-            {stats.map((stat) => (
-              <div key={stat.label} className="glass rounded-2xl px-5 py-4">
-                <dt className="text-sm text-muted-foreground">{stat.label}</dt>
-                <dd className="mt-1 font-mono text-2xl font-semibold text-foreground">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
+          <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-px rounded-3xl bg-slate-200/40 shadow-sm sm:grid-cols-3 overflow-hidden">
+            {stats.map((stat) => {
+              const icons = {
+                ShieldCheck,
+                Star,
+                Users,
+              } as const
+              const Icon = icons[stat.icon]
+
+              return (
+                <div key={stat.label} className="bg-white/95 px-5 py-6 sm:px-6">
+                  <div className="flex items-end gap-4">
+                    <Icon className="size-7 text-primary" />
+                    <p className="text-4xl font-semibold tracking-tight text-foreground">{stat.value}</p>
+                  </div>
+                  <p className="mt-4 text-sm font-medium text-muted-foreground">{stat.label}</p>
+                </div>
+              )
+            })}
           </dl>
         </SectionReveal>
       </div>

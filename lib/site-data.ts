@@ -114,9 +114,9 @@ export const providers: Provider[] = [
 ]
 
 export const stats = [
-  { value: '94%', label: 'Return to Sport Rate' },
-  { value: '14 Day', label: 'Avg. Recovery Acceleration' },
-  { value: '1,200+', label: 'Athletes Treated' },
+  { value: '94%', label: 'Return to Sport Rate', icon: 'ShieldCheck' },
+  { value: '4.9', label: 'Rating', icon: 'Star' },
+  { value: '1,200+', label: 'Athletes Treated', icon: 'Users' },
 ] as const
 
 export const testimonials = [
@@ -125,18 +125,21 @@ export const testimonials = [
       'They pinpointed a stride defect behind my Achilles flare and had me back to a new PR within four weeks. Genuinely game changing.',
     name: 'Sarah T.',
     detail: 'Boston Marathon Competitor',
+    rating: 5,
   },
   {
     quote:
       'The concussion protocol was precise and transparent at every step. As a parent, the peace of mind was everything.',
     name: 'David K.',
     detail: 'Parent of Varsity Football Player',
+    rating: 5,
   },
   {
     quote:
       'I was told I needed meniscus surgery. Apex Kinetic got me back to heavy lifting pain free, no operation required.',
     name: 'Marcus L.',
     detail: 'Competitive CrossFitter',
+    rating: 4,
   },
 ] as const
 

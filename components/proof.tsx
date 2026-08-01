@@ -1,6 +1,6 @@
 import { SectionReveal } from '@/components/section-reveal'
 import { stats, testimonials } from '@/lib/site-data'
-import { HeartPulse, Quote } from 'lucide-react'
+import { HeartPulse, Star } from 'lucide-react'
 
 export function Proof() {
   return (
@@ -40,7 +40,18 @@ export function Proof() {
           {testimonials.map((t, i) => (
             <SectionReveal as="article" key={t.name} delay={i * 100}>
               <div className="flex h-full flex-col gap-4 rounded-2xl border border-border/60 bg-background/60 p-6">
-                <Quote className="size-7 text-primary" />
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }, (_, starIndex) => {
+                    const filled = starIndex < t.rating
+                    return (
+                      <Star
+                        key={starIndex}
+                        className={filled ? 'size-5 text-primary' : 'size-5 text-muted-foreground'}
+                        fill={filled ? 'currentColor' : 'none'}
+                      />
+                    )
+                  })}
+                </div>
                 <p className="flex-1 leading-relaxed text-pretty text-foreground">
                   {t.quote}
                 </p>
