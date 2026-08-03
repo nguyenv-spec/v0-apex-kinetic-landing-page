@@ -22,7 +22,7 @@ export function Providers() {
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {providers.map((provider, i) => (
             <SectionReveal as="article" key={provider.id} delay={i * 100}>
-              <div className="flex h-full flex-col gap-5 rounded-2xl border border-border/60 bg-background/60 p-6 sm:flex-row sm:items-start">
+              <div className="flex h-full flex-col gap-5 rounded-2xl border border-border/60 bg-secondary/10 p-6 sm:flex-row sm:items-start">
                 <div className="relative size-24 shrink-0 overflow-hidden rounded-xl border border-border/60">
                   <Image
                     src={provider.image}

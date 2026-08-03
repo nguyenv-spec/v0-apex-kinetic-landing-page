@@ -21,7 +21,7 @@ export function Proof() {
         </SectionReveal>
 
         <SectionReveal className="mt-12">
-          <div className="glass grid grid-cols-1 gap-6 rounded-2xl px-6 py-8 sm:grid-cols-3">
+          <div className="glass grid grid-cols-1 gap-6 rounded-2xl bg-secondary/10 px-6 py-8 sm:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="font-mono text-4xl font-semibold text-primary">
@@ -39,7 +39,7 @@ export function Proof() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <SectionReveal as="article" key={t.name} delay={i * 100}>
-              <div className="flex h-full flex-col gap-4 rounded-2xl border border-border/60 bg-background/60 p-6">
+              <div className="flex h-full flex-col gap-4 rounded-2xl border border-border/60 bg-secondary/10 p-6">
                 <div className="flex items-start gap-3">
                   <div className="relative h-12 w-12 overflow-hidden rounded-full bg-muted">
                     <img
