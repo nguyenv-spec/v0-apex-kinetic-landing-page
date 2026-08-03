@@ -21,7 +21,7 @@ export function Faqs() {
         </SectionReveal>
 
         <SectionReveal className="mt-10">
-          <Accordion className="glass rounded-2xl bg-secondary/10 px-2 sm:px-4">
+          <Accordion className="glass rounded-2xl px-2 sm:px-4">
             {faqs.map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
                 <AccordionTrigger className="text-left text-lg font-semibold leading-7 py-4">

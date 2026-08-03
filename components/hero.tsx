@@ -48,7 +48,7 @@ export function Hero() {
         </div>
 
         <SectionReveal delay={360}>
-          <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-0 rounded-3xl bg-secondary/10 shadow-sm sm:grid-cols-3 overflow-hidden">
+          <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-0 rounded-3xl bg-white/95 shadow-sm sm:grid-cols-3 overflow-hidden">
             {stats.map((stat) => {
               const icons = {
                 ShieldCheck,
@@ -58,7 +58,7 @@ export function Hero() {
               const Icon = icons[stat.icon]
 
               return (
-                <div key={stat.label} className="bg-secondary/10 px-5 py-6 sm:px-6">
+                <div key={stat.label} className="bg-white/95 px-5 py-6 sm:px-6">
                   <div className="flex items-end gap-4">
                     <Icon className="size-9 text-primary" />
                     <p className="text-4xl font-semibold tracking-tight text-foreground">{stat.value}</p>

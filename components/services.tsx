@@ -50,7 +50,7 @@ export function Services() {
         <div className="mt-8 space-y-4">
           {filteredServices.map((service, i) => (
             <SectionReveal as="article" key={service.id} delay={i * 70}>
-              <div className="rounded-2xl border border-border/60 bg-secondary/10 p-6 shadow-sm sm:p-8">
+              <div className="rounded-2xl border border-border/60 bg-background/70 p-6 shadow-sm sm:p-8">
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                   <div className="space-y-3">
                     <div className="flex flex-wrap items-center gap-3">

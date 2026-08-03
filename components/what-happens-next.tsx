@@ -38,7 +38,7 @@ export function WhatHappensNext() {
         <div className="mt-10 grid gap-4 lg:grid-cols-4">
           {steps.map((step, index) => (
             <SectionReveal as="article" key={step.title} delay={index * 80}>
-              <div className="flex h-full flex-col rounded-2xl border border-border/60 bg-secondary/10 p-6 shadow-sm">
+              <div className="flex h-full flex-col rounded-2xl border border-border/60 bg-background/70 p-6 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
                     Step {index + 1}
