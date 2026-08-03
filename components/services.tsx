@@ -21,7 +21,7 @@ export function Services() {
     <section id="services" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionReveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-4xl">
+          <h2 className="text-4xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-5xl">
             Services & Transparent Pricing
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">

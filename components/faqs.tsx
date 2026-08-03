@@ -12,7 +12,7 @@ export function Faqs() {
     <section id="faq" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-10">
         <SectionReveal className="text-center">
-          <h2 className="text-3xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-4xl">
+          <h2 className="text-4xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-5xl">
             Questions, Answered
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
@@ -24,7 +24,7 @@ export function Faqs() {
           <Accordion className="glass rounded-2xl px-2 sm:px-4">
             {faqs.map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left text-base font-medium">
+                <AccordionTrigger className="text-left text-lg font-semibold leading-7 py-4">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="leading-relaxed text-muted-foreground">

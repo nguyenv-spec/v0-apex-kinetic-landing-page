@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { CtaButton } from '@/components/cta-button'
-import { KineticBackground } from '@/components/kinetic-background'
 import { SectionReveal } from '@/components/section-reveal'
 import { stats } from '@/lib/site-data'
 import { Activity, BadgeCheck, ShieldCheck, Sparkles, Star, Users } from 'lucide-react'
@@ -17,9 +16,6 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        <KineticBackground />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>
 
       <div className="mx-auto w-full max-w-7xl px-4 pb-20 pt-36 sm:px-6 sm:pb-28 sm:pt-44 lg:px-10">
@@ -29,14 +25,14 @@ export function Hero() {
               <Sparkles className="size-4" />
               Sports Medicine & Recovery
             </div>
-            <h1 className="mt-6 text-5xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 text-5xl font-semibold tracking-[-0.03em] text-white sm:text-6xl lg:text-7xl">
               Recover Stronger.{' '}
               <span className="text-primary">Return Faster.</span>
             </h1>
           </SectionReveal>
 
           <SectionReveal delay={160}>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-pretty text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
               Advanced non surgical orthopedic care and high performance recovery
               for athletes and active adults. We build clinically grounded plans
               that get you moving confidently again.
@@ -52,7 +48,7 @@ export function Hero() {
         </div>
 
         <SectionReveal delay={360}>
-          <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-px rounded-3xl bg-slate-200/40 shadow-sm sm:grid-cols-3 overflow-hidden">
+          <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-0 rounded-3xl bg-white/95 shadow-sm sm:grid-cols-3 overflow-hidden">
             {stats.map((stat) => {
               const icons = {
                 ShieldCheck,
@@ -64,10 +60,10 @@ export function Hero() {
               return (
                 <div key={stat.label} className="bg-white/95 px-5 py-6 sm:px-6">
                   <div className="flex items-end gap-4">
-                    <Icon className="size-7 text-primary" />
+                    <Icon className="size-9 text-primary" />
                     <p className="text-4xl font-semibold tracking-tight text-foreground">{stat.value}</p>
                   </div>
-                  <p className="mt-4 text-sm font-medium text-muted-foreground">{stat.label}</p>
+                  <p className="mt-4 text-sm font-medium text-muted-foreground text-right">{stat.label}</p>
                 </div>
               )
             })}

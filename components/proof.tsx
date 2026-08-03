@@ -11,7 +11,7 @@ export function Proof() {
             <HeartPulse className="size-4" />
             Trusted by active adults and athletes
           </div>
-          <h2 className="text-3xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-4xl">
+          <h2 className="text-4xl font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-5xl">
             Measurable progress, not vague promises
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground">
@@ -40,6 +40,19 @@ export function Proof() {
           {testimonials.map((t, i) => (
             <SectionReveal as="article" key={t.name} delay={i * 100}>
               <div className="flex h-full flex-col gap-4 rounded-2xl border border-border/60 bg-background/60 p-6">
+                <div className="flex items-start gap-3">
+                  <div className="relative h-12 w-12 overflow-hidden rounded-full bg-muted">
+                    <img
+                      src={t.image}
+                      alt={`${t.name} profile photo`}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">{t.name}</p>
+                    <p className="text-sm text-muted-foreground">{t.detail}</p>
+                  </div>
+                </div>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }, (_, starIndex) => {
                     const filled = starIndex < t.rating
@@ -55,10 +68,6 @@ export function Proof() {
                 <p className="flex-1 leading-relaxed text-pretty text-foreground">
                   {t.quote}
                 </p>
-                <div className="border-t border-border/50 pt-4">
-                  <p className="font-semibold text-foreground">{t.name}</p>
-                  <p className="text-sm text-muted-foreground">{t.detail}</p>
-                </div>
               </div>
             </SectionReveal>
           ))}

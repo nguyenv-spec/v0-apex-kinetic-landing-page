@@ -136,6 +136,7 @@ export const testimonials = [
     name: 'Sarah T.',
     detail: 'Boston Marathon Competitor',
     rating: 5,
+    image: '/images/testimonial-sarah-t.png',
   },
   {
     quote:
@@ -143,6 +144,7 @@ export const testimonials = [
     name: 'David K.',
     detail: 'Parent of Varsity Football Player',
     rating: 5,
+    image: '/images/testimonial-david-k.png',
   },
   {
     quote:
@@ -150,6 +152,7 @@ export const testimonials = [
     name: 'Marcus L.',
     detail: 'Competitive CrossFitter',
     rating: 4,
+    image: '/images/testimonial-marcus-l.png',
   },
 ] as const
 
