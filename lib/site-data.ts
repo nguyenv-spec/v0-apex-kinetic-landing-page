@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
     id: 'what-to-expect-in-your-first-visit',
     title: 'What to Expect in Your First Visit',
     description:
-      'An easy guide to your first consultation, what we assess, and how we build your personalized plan.',
+      'A friendly walkthrough of your first appointment, how we assess your injury, and how we build a recovery plan around your goals.',
     category: 'Injury Care',
     date: 'June 12, 2026',
     content: [
@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     id: 'recovery-strategies-for-runners',
     title: 'Recovery Strategies for Runners',
     description:
-      'How to recover smarter after hard training and stay ahead of common running injuries.',
+      'Smart recovery habits for runners that protect your body, reduce risk, and help you come back stronger after hard workouts.',
     category: 'Performance',
     date: 'May 27, 2026',
     content: [
@@ -134,7 +134,7 @@ export const blogPosts: BlogPost[] = [
     id: 'managing-sports-concussions',
     title: 'Managing Sports Concussions Safely',
     description:
-      'A practical overview of concussion recovery, return to play, and how to stay safe while healing.',
+      'A clear, practical look at concussion recovery, a safe return to play, and how to protect yourself while healing.',
     category: 'Concussion',
     date: 'April 18, 2026',
     content: [
