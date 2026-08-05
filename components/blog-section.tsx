@@ -66,16 +66,6 @@ export function BlogSection() {
             </SectionReveal>
           ))}
         </div>
-
-        <SectionReveal className="mt-10 text-center">
-          <Button
-            size="lg"
-            render={<Link href="/blog" />}
-            className="mx-auto"
-          >
-            View all blog posts
-          </Button>
-        </SectionReveal>
       </div>
     </section>
   )

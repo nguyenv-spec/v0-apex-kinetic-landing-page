@@ -24,9 +24,9 @@ export const clinic = {
 } as const
 
 export const navLinks = [
-  { label: 'Services', href: '/#services' },
-  { label: 'Blog', href: '/blog' },
   { label: 'Team', href: '/#team' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Blog', href: '/#blog' },
   { label: 'Results', href: '/#results' },
   { label: 'FAQ', href: '/#faq' },
 ] as const
