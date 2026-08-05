@@ -63,7 +63,7 @@ export function Hero() {
                     <Icon className="size-9 text-primary" />
                     <p className="text-4xl font-semibold tracking-tight text-foreground">{stat.value}</p>
                   </div>
-                  <p className="mt-4 text-sm font-medium text-muted-foreground text-right">{stat.label}</p>
+                  <p className="mt-4 text-sm font-medium text-muted-foreground text-center">{stat.label}</p>
                 </div>
               )
             })}

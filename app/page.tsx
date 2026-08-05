@@ -7,6 +7,7 @@ import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
 import { Providers } from '@/components/providers'
 import { Services } from '@/components/services'
+import { BlogSection } from '@/components/blog-section'
 import { Proof } from '@/components/proof'
 import { Faqs } from '@/components/faqs'
 import { Footer } from '@/components/footer'
@@ -44,6 +45,7 @@ export default function Page() {
         <Hero />
         <Providers />
         <Services />
+        <BlogSection />
         <WhatHappensNext />
         <Proof />
         <Faqs />

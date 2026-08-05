@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Calendar } from '@/components/ui/calendar'
 import {
   Dialog,
@@ -39,6 +39,9 @@ export function BookingModal() {
   const [phone, setPhone] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
+  const serviceTitle = (id?: string) =>
+    services.find((s) => s.id === id)?.title ?? ''
+
   const timeSlots = [
     '8:30 AM',
     '10:00 AM',
@@ -54,7 +57,7 @@ export function BookingModal() {
   useEffect(() => {
     if (open) {
       setStep(1)
-      setService(presetService ?? '')
+      setService(serviceTitle(presetService) || '')
       setDate(undefined)
       setTimeSlot('')
       setName('')
@@ -111,7 +114,7 @@ export function BookingModal() {
             </div>
 
             {step === 1 ? (
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="space-y-6">
                 <FieldGroup>
                   <Field>
                     <FieldLabel htmlFor="service">Service</FieldLabel>
@@ -125,7 +128,7 @@ export function BookingModal() {
                       <SelectContent>
                         <SelectGroup>
                           {services.map((s) => (
-                            <SelectItem key={s.id} value={s.id}>
+                            <SelectItem key={s.id} value={s.title}>
                               {s.title}
                             </SelectItem>
                           ))}
@@ -164,20 +167,10 @@ export function BookingModal() {
                   </Field>
                 </FieldGroup>
 
-                <div className="flex flex-col justify-between gap-4 rounded-2xl border border-border/60 bg-background/40 p-6">
-                  <div>
-                    <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                      <Sparkles className="size-4 text-primary" />
-                      Why we ask for this first
-                    </div>
-                    <p className="mt-4 text-sm text-muted-foreground">
-                      We use your contact info to confirm your appointment and
-                      follow up on any adjustments if needed.
-                    </p>
-                  </div>
+                <div className="flex justify-center">
                   <Button
                     size="lg"
-                    className="w-full"
+                    className="w-full max-w-[420px]"
                     onClick={handleContinue}
                     disabled={!canContinue}
                   >

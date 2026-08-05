@@ -25,6 +25,7 @@ export const clinic = {
 
 export const navLinks = [
   { label: 'Services', href: '/#services' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Team', href: '/#team' },
   { label: 'Results', href: '/#results' },
   { label: 'FAQ', href: '/#faq' },
@@ -90,6 +91,57 @@ export const services: Service[] = [
     price: '$175',
     duration: '45 min',
     bodyPart: 'Spine',
+  },
+]
+
+export type BlogPost = {
+  id: string
+  title: string
+  description: string
+  category: string
+  date: string
+  content: string[]
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: 'what-to-expect-in-your-first-visit',
+    title: 'What to Expect in Your First Visit',
+    description:
+      'An easy guide to your first consultation, what we assess, and how we build your personalized plan.',
+    category: 'Injury Care',
+    date: 'June 12, 2026',
+    content: [
+      'Your first visit is all about understanding your history, pinpointing the source of pain, and defining the best path back to activity. We use hands-on assessment, movement screening, and targeted questions to build a care plan that fits your goals.',
+      'During the appointment, expect a thorough review of your symptoms, a physical exam, and a discussion of how your injury affects your sport, work, or lifestyle. That lets us recommend the safest, most efficient next steps for recovery.',
+      'We also review insurance and payment options, so your focus stays on healing and performance instead of paperwork.',
+    ],
+  },
+  {
+    id: 'recovery-strategies-for-runners',
+    title: 'Recovery Strategies for Runners',
+    description:
+      'How to recover smarter after hard training and stay ahead of common running injuries.',
+    category: 'Performance',
+    date: 'May 27, 2026',
+    content: [
+      'Running volume, intensity, and recovery all need to work together. The right strategy helps your body adapt without adding unnecessary injury risk.',
+      'We recommend combining active recovery days, mobility drills, and targeted strength work to support the posterior chain and reduce stress on the knee, hip, and ankle.',
+      'Consistency is the most important part of recovery. Small, sustainable adjustments add up faster than one off “quick fixes.”',
+    ],
+  },
+  {
+    id: 'managing-sports-concussions',
+    title: 'Managing Sports Concussions Safely',
+    description:
+      'A practical overview of concussion recovery, return to play, and how to stay safe while healing.',
+    category: 'Concussion',
+    date: 'April 18, 2026',
+    content: [
+      'Concussion care is not one size fits all. The safest return is guided by symptom resolution, balance testing, and a stepwise reintroduction to sport.',
+      'At Apex Kinetic, we prioritize baseline comparison and gradual progression so you rebuild confidence without risking a second injury.',
+      'If you suspect a concussion, it’s always better to get evaluated early and avoid pushing through symptoms on your own.',
+    ],
   },
 ]
 
