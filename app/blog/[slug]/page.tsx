@@ -15,8 +15,9 @@ export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.id }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = blogPosts.find((item) => item.id === params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = blogPosts.find((item) => item.id === slug)
 
   if (!post) {
     return {
@@ -31,8 +32,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   }
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts.find((item) => item.id === params.slug)
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const post = blogPosts.find((item) => item.id === slug)
 
   if (!post) {
     notFound()
@@ -43,19 +45,25 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <Navbar />
       <main className="mx-auto w-full max-w-6xl px-4 pt-28 pb-20 sm:px-6 sm:pt-36 lg:px-10">
         <SectionReveal>
-          <div className="max-w-3xl rounded-3xl border border-border/60 bg-background/70 p-10 shadow-sm">
-            <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              <span className="rounded-full bg-background/80 px-3 py-1 text-muted-foreground">
-                {post.category}
-              </span>
-              <span>{post.date}</span>
+          <div className="max-w-3xl rounded-[2rem] border border-border/60 bg-background/70 p-8 shadow-sm sm:p-10">
+            <div className="rounded-2xl border border-dashed border-border/70 bg-secondary/40 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+                Article preview
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                <span className="rounded-full bg-background/80 px-3 py-1 text-muted-foreground">
+                  {post.category}
+                </span>
+                <span>{post.date}</span>
+              </div>
+              <h1 className="mt-6 text-4xl font-semibold tracking-[-0.03em] text-foreground sm:text-5xl">
+                {post.title}
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                {post.description}
+              </p>
             </div>
-            <h1 className="mt-6 text-4xl font-semibold tracking-[-0.03em] text-foreground sm:text-5xl">
-              {post.title}
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              {post.description}
-            </p>
+
             <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
               {post.content.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>

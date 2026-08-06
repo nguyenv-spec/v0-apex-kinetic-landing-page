@@ -45,9 +45,9 @@ export default function Page() {
         <Hero />
         <Providers />
         <Services />
-        <BlogSection />
         <WhatHappensNext />
         <Proof />
+        <BlogSection />
         <Faqs />
       </main>
       <Footer />

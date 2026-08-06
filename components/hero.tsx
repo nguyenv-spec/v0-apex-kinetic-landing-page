@@ -21,7 +21,7 @@ export function Hero() {
       <div className="mx-auto w-full max-w-7xl px-4 pb-20 pt-36 sm:px-6 sm:pb-28 sm:pt-44 lg:px-10">
         <div className="max-w-3xl">
           <SectionReveal delay={80}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-3 py-1 text-sm font-medium text-primary">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white bg-white px-3 py-1 text-sm font-medium text-primary">
               <Sparkles className="size-4" />
               Sports Medicine & Recovery
             </div>

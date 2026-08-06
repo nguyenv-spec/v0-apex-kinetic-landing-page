@@ -1,6 +1,5 @@
-'use client'
-
-import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import { SectionReveal } from '@/components/section-reveal'
 import { Button } from '@/components/ui/button'
 import {
@@ -11,18 +10,9 @@ import {
   CardContent,
   CardFooter,
 } from '@/components/ui/card'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
 import { blogPosts } from '@/lib/site-data'
 
 export function BlogSection() {
-  const [selectedPost, setSelectedPost] = useState<typeof blogPosts[number] | null>(null)
 
   return (
     <section id="blog" className="scroll-mt-20 py-20 sm:py-28">
@@ -58,17 +48,23 @@ export function BlogSection() {
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="px-6 pb-6">
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {post.content[0]}
-                  </p>
+                <CardContent className="px-6 pb-4">
+                  <div className="relative h-48 overflow-hidden rounded-xl">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
                 </CardContent>
 
                 <CardFooter className="mt-auto justify-between gap-4 px-6 pb-6 pt-0">
                   <Button
                     variant="link"
                     className="text-sm font-semibold text-primary"
-                    onClick={() => setSelectedPost(post)}
+                    render={<Link href={`/blog/${post.id}`} target="_blank" rel="noopener noreferrer" />}
                   >
                     Read article
                   </Button>
@@ -78,28 +74,6 @@ export function BlogSection() {
           ))}
         </div>
       </div>
-
-      <Dialog open={selectedPost !== null} onOpenChange={(open) => !open && setSelectedPost(null)}>
-        <DialogContent className="max-w-lg">
-          <DialogHeader>
-            <DialogTitle>Prototype preview</DialogTitle>
-            <DialogDescription>
-              This article is part of an interactive prototype. The full write-up is not available yet, but you can still preview the topic and explore the design.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="rounded-xl border border-border/60 bg-background/80 p-4 text-sm text-muted-foreground">
-            <p className="font-semibold text-foreground">{selectedPost?.title}</p>
-            <p className="mt-2 text-sm leading-relaxed">
-              {selectedPost?.description}
-            </p>
-          </div>
-          <DialogFooter className="mt-2" showCloseButton>
-            <Button variant="default" onClick={() => setSelectedPost(null)}>
-              Close
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </section>
   )
 }

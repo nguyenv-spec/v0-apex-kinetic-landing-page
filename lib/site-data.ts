@@ -26,8 +26,8 @@ export const clinic = {
 export const navLinks = [
   { label: 'Team', href: '/#team' },
   { label: 'Services', href: '/#services' },
-  { label: 'Blog', href: '/#blog' },
   { label: 'Results', href: '/#results' },
+  { label: 'Blog', href: '/#blog' },
   { label: 'FAQ', href: '/#faq' },
 ] as const
 
@@ -101,6 +101,7 @@ export type BlogPost = {
   category: string
   date: string
   content: string[]
+  image: string
 }
 
 export const blogPosts: BlogPost[] = [
@@ -116,6 +117,7 @@ export const blogPosts: BlogPost[] = [
       'During the appointment, expect a thorough review of your symptoms, a physical exam, and a discussion of how your injury affects your sport, work, or lifestyle. That lets us recommend the safest, most efficient next steps for recovery.',
       'We also review insurance and payment options, so your focus stays on healing and performance instead of paperwork.',
     ],
+    image: '/images/article-1.png',
   },
   {
     id: 'recovery-strategies-for-runners',
@@ -129,6 +131,7 @@ export const blogPosts: BlogPost[] = [
       'We recommend combining active recovery days, mobility drills, and targeted strength work to support the posterior chain and reduce stress on the knee, hip, and ankle.',
       'Consistency is the most important part of recovery. Small, sustainable adjustments add up faster than one off “quick fixes.”',
     ],
+    image: '/images/article-2.png',
   },
   {
     id: 'managing-sports-concussions',
@@ -142,6 +145,7 @@ export const blogPosts: BlogPost[] = [
       'At Apex Kinetic, we prioritize baseline comparison and gradual progression so you rebuild confidence without risking a second injury.',
       'If you suspect a concussion, it’s always better to get evaluated early and avoid pushing through symptoms on your own.',
     ],
+    image: '/images/article-3.png',
   },
 ]
 
